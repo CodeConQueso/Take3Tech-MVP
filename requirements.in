@@ -1,0 +1,53 @@
+# Base requirements for the ChatOps bot
+fastapi==0.111.0
+uvicorn[standard]==0.29.0
+python-dotenv==1.0.1
+structlog==23.2.0
+slowapi==0.1.8
+
+# Microsoft Bot Framework
+botbuilder-core==4.16.2
+botbuilder-schema==4.16.2
+botbuilder-integration-aiohttp==4.15.0
+
+# Explicitly pin aiohttp to avoid conflicts
+aiohttp==3.8.6
+
+# Microsoft Graph API (for RBAC)
+azure-identity>=1.15.0
+msgraph-sdk>=1.0.0
+
+# AI & LLM (Google Gemini)
+google-generativeai>=0.7.0
+
+# Data Handling & Async
+pydantic==2.5.2
+redis[hiredis]>=5.0.4
+apscheduler>=3.10.4
+
+# Utility & Tools
+requests>=2.31.0
+httpx>=0.27.0
+PyGithub>=2.3.0
+jira>=3.6.0
+python-dateutil
+tenacity
+pytz
+typing-extensions==4.9.0
+
+# Tool Specific Dependencies (Add as needed)
+# octopus-python-client # Check PyPI for actual package name
+
+# Development & Testing (Optional but recommended)
+# pip-tools
+pytest>=7.1.2
+pytest-asyncio>=0.18.3
+pytest-mock
+respx>=0.19.2
+flake8>=4.0.1
+mypy>=0.961
+
+# Optional for type checking strictness
+types-pytz
+types-requests
+types-redis 
